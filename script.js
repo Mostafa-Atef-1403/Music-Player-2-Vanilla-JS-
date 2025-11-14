@@ -217,7 +217,7 @@ const updateRunningTime = function () {
   playerSeekRange.value = audioSource.currentTime;
   playerRunningTime.textContent = getTimecode(audioSource.currentTime);
 
-  updateRangeFill();
+  updateRangeFill.call(playerSeekRange);
   isMusicEnd();
 };
 
@@ -378,3 +378,4 @@ const muteVolume = function () {
 };
 
 playerVolumeBtn.addEventListener("click", muteVolume);
+
